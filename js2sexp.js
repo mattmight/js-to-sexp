@@ -14,7 +14,7 @@ var input = fs.readFileSync(argv[2],{encoding: 'utf8'}) ;
 // Create an AST:
 var ast = reflect.parse(input) ;
 
-// map : (a -> b) -> array[a] -> array[b]
+// map : (a -> b) * array[a] -> array[b]
 function map(f,a) {
   var b = [] ;
   for (var i = 0; i < a.length; i++) {
